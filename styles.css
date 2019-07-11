@@ -1,0 +1,22 @@
+body{
+    background-color:skyblue;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+#nav{
+    position: sticky;
+    top: 0;
+    height: 80px;
+    width: 100%;
+    background-color: black;
+}
+nav > ul{
+    display: flex;
+    float: right;
+}
+
+nav > ul> li{
+    margin-left: 20px;
+}
+  
