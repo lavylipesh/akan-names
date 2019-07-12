@@ -1,5 +1,5 @@
 body{
-    background-color:skyblue;
+    background-color:grey;
     text-align: center;
     margin: 0;
     padding: 0;
@@ -9,7 +9,7 @@ body{
     top: 0;
     height: 80px;
     width: 100%;
-    background-color: black;
+    background-color:black;
 }
 nav > ul{
     display: flex;
@@ -18,5 +18,16 @@ nav > ul{
 
 nav > ul> li{
     margin-left: 20px;
+}
+#intro{
+    background-image: url("https://cdn.pixabay.com/photo/2016/02/25/06/58/interesting-1221419__340.jpg");
+    height: 550px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width:100%;
+}
+#me{
+    margin: 10px;
+    font-size: 30px;
 }
   
