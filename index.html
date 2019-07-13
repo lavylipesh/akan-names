@@ -36,17 +36,26 @@
             <p><strong>GENDER</strong></p>
 
 
-        <input type="radio" name="gender" value="male"> Male<br>
-        <input type="radio" name="gender" value="female"> Female<br>
-
+        <input type="radio" name="gender" value="male" id="gender"> Male<br>
+        <input type="radio" name="gender" value="female" id="gender"> Female<br>
+           
         
 
          
              <p><strong>BIRTH DETAILS</strong></p>
-             <form action=""></form>
+             <form action="calculate">
+                 <input type="century" >
+                 <label for="century" id="cc">CC</label><br><br>
+                 <input type="year">
+                 <label for="year" id="yy">YY</label><br><br>
+                 <input type="month">
+                 <label for="month" id="mm">MM</label><br><br>
+                 <input type="number">
+                 <label for="date" id="dd">DD</label><br><br>
+                 
+             </form>
              
-             <input type="submit" onclick="calculate()">
-
+             <button type="button" onclick="calculate()">Submit</button>
             
              
 
@@ -58,6 +67,5 @@
       
 
 
-
-    </body>
+   </body>
 </html>
