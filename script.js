@@ -1,73 +1,95 @@
-var day = [ "Sunday" ,   "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-var female = ["Akosua","Adwoa","Abenaa","Akua","Yaa","Afua","Ama"];
-var male=["Kwasi","Kwadwo","Kwabena","Kwaku","Yaw","Kofi","Kwame"];
-var CC= document.getElementById("CC").value = number;
-var YY=document.getElementById("YY").value = number;
-var MM=document.getElementById("MM").value = number;
-var DD=document.getElementById("DD").value = number;
-
-var enter=document.getElementById("gender").value = number;
+var day = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+var femaleNames = ["Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"];
+var maleNames = ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"];
 
 
+//calculate day of week
+var d;
+function calculate() {
+    var CC = parseInt(document.getElementById("cc")).value;
+    var YY = parseInt(document.getElementById("yy")).value;
+    var MM = parseInt(document.getElementById("mm")).value;
+    var DD = parseInt(document.getElementById("dd")).value;
 
-
-
-
-
-
-
-
-
-
-
-var calculate=function workout (){ 
-return workout (d) = ( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD ) %7
-}
-var male=true;
-if(day===0){
-    console.log("you were born on a Sunday  your akan name is Kwasi")
-}
-else if(day===1){
-    console.log("you were born on a Monday your akan name is Kwadwo")
-}
- else if( day===2){
-     console.log("you were born on a Tuesday your akan name is Kwabena")
- }
- else if(day===3){
-    console.log("you were born on a Wednesday your akan name is Kwaku")
-}
- else if(day===4){
-     console.log("you were born on a Thursday your akan name is Yaw")
- }
- else if(day===5){
-    console.log("you were born on a Friday your akan name is Kofi")
-}
-else if(day===6){
-   console.log("you were boorn on a Saturday your akan name is Kwame")
+    d = (((CC / 4) - 2 * CC - 1) + ((5 * YY / 4)) + ((26 * (MM + 1) / 10)) + DD) % 7;
+    return (Math.round(d));
 }
 
-var female=true;
-if(day===0){
-    console.log("you were born on a Sunday  your akan name is Akosua")
+
+//radio buttons
+function radio(){
+    calculate();
+    var rads = document.getElementByName("gender");
+
+    if (rads[0].checked == true) {
+        var gender = "male";
+    }
+    else if (rads[1].checked == true) {
+        var gender = "female";
+    }
+    else {
+        console.log("pass")
+    }
 }
-else if(day===1){
-    console.log("you were born on a Monday your akan name is Adwoa")
+//assign akan names & day of birth
+function output() {
+    radio();
+    switch (gender) {
+        case "male":
+
+            if (day === 0) {
+                document.write("Sunday" + maleNames[0])
+            }
+            else if (day === 1) {
+                document.write("Monday" + maleNames[1])
+            }
+            else if (day === 2) {
+                document.write("Tuesday" + maleNames[2])
+            }
+            else if (day === 3) {
+                document.write("Wednesday" + maleNames[3])
+            }
+            else if (day === 4) {
+                document.write("Thursday" + maleNames[4])
+            }
+            else if (day === 5) {
+                document.write("Friday" + maleNames[5])
+            }
+            else if (day === 6) {
+                document.write("Saturday" + maleNames[6])
+            }
+            break;
+        case "female":
+
+            if (day === 0) {
+                document.write("Sunday" + femaleNames[0])
+            }
+            else if (day === 1) {
+                document.write("Monday" + femaleNames[1])
+            }
+            else if (day === 2) {
+                document.write("Tuesday" + femaleNames[2])
+            }
+            else if (day === 3) {
+                document.write("Wednesday" + femaleNames[3])
+            }
+            else if (day === 4) {
+                document.write("Thursday" + femaleNames[4])
+            }
+            else if (day === 5) {
+                document.write("Friday" + femaleNames[5])
+            }
+            else if (day === 6) {
+                document.write("Saturday" + femaleNames)
+            }
+
+    }
 }
- else if(day===2){
-     console.log("you were born on a Tuesday your akan name is Abenaa")
- }
- else if(day===3){
-    console.log("you were born on a Wednesday your akan name is Akua")
-}
- else if(day===4){
-     console.log("you were born on a Thursday your akan name is Yaa")
- }
- else if(day===5){
-    console.log("you were born on a Friday your akan name is Afua")
-}
-else if(day===6){
-   console.log(("you were boorn on a Saturday your akan name Ama")
-}
+console.log("pass");
+//call functions in html
+
+
+
 
 
 

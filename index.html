@@ -25,7 +25,8 @@
 
 
         <div id="intro">
-        <h1><strong>AKAN NAMES</strong></h1>
+        <h1><strong>AKAN NAMES</strong
+            ></h1>
         <div id="me"><p>The Akan population of Ghana frequently name their children after the day of the week they were born and the order in which they were born.</p>
         <p>These names are derived from the Ghananian culture.</p>
         <p>These is an application that will calculate the day of the week that someone was born depending on their date of birth and  give them an akan name depending on their gender.</p>
@@ -33,13 +34,13 @@
         </div>
 
         <div id="details">
-            <p><strong>GENDER</strong></p>
+            <div id="gender"><p><strong>GENDER</strong></p>
 
 
         <input type="radio" name="gender" value="male" id="gender"> Male<br>
         <input type="radio" name="gender" value="female" id="gender"> Female<br>
            
-        
+             </div>
 
          
              <p><strong>BIRTH DETAILS</strong></p>
@@ -48,18 +49,14 @@
                  <label for="century" id="cc">CC</label><br><br>
                  <input type="year">
                  <label for="year" id="yy">YY</label><br><br>
-                 <input type="month">
+                 <input type="text">
                  <label for="month" id="mm">MM</label><br><br>
-                 <input type="number">
+                 <input type="text">
                  <label for="date" id="dd">DD</label><br><br>
                  
              </form>
              
-             <button type="button" onclick="calculate()">Submit</button>
-            
-             
-
-
+             <button type="button" onclick="output()">Submit</button>
          </div>
 
          <link rel="stylesheet" href="script.js">
