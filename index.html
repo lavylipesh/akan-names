@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>AKAN NAMES</title>
     <link rel="stylesheet" href="styles.css">
+    
 </head>
     <body>
             <div id="nav">
@@ -44,25 +45,26 @@
 
          
              <p><strong>BIRTH DETAILS</strong></p>
-             <form action="calculate">
-                 <input type="century" >
-                 <label for="century" id="cc">CC</label><br><br>
-                 <input type="year">
-                 <label for="year" id="yy">YY</label><br><br>
-                 <input type="text">
-                 <label for="month" id="mm">MM</label><br><br>
-                 <input type="text">
-                 <label for="date" id="dd">DD</label><br><br>
+             <form>
+                 <input type="number" id="cc">
+                 <label for="century" >CC</label><br><br>
+                 <input type="number" id="yy">
+                 <label for="year" >YY</label><br><br>
+                 <input type="number" id="mm">
+                 <label for="month" >MM</label><br><br>
+                 <input type="number" id="dd">
+                 <label for="date" >DD</label><br><br>
                  
              </form>
-             
-             <button type="button" onclick="output()">Submit</button>
+              
+             <button  class="submit" onclick="output();">Submit</button>
+ 
          </div>
 
-         <link rel="stylesheet" href="script.js">
-
+         
       
 
-
+         <script src="script.js"></script>
    </body>
+   
 </html>
