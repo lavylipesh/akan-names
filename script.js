@@ -30,27 +30,6 @@ function gender(){
         case "Male":
 
             if (da == 1) {
-<<<<<<< HEAD
-                alert("Sunday" + maleNames[0]);
-            }
-            else if (da == 2) {
-                alert("Monday" + maleNames[1]);
-            }
-            else if (da == 3) {
-                alert("Tuesday" + maleNames[2]);
-            }
-            else if (da == 4) {
-                alert("Wednesday" + maleNames[3]);
-            }
-            else if (da == 5) {
-                alert("Thursday" + maleNames[4]);
-            }
-            else if (da == 6) {
-                alert("Friday" + maleNames[5]);
-            }
-            else if (da == -0) {
-                alert("Saturday" + maleNames[6]);
-=======
                 alert("Sunday" + " Your Name is "+maleNames[0]);
             }
             else if (da == 2) {
@@ -70,7 +49,6 @@ function gender(){
             }
             else if (da == -0) {
                 alert("Saturday" +" Your Name is "+ maleNames[6]);
->>>>>>> master
             }else{
                 console.log("male switch");
             }
@@ -78,27 +56,6 @@ function gender(){
         case "Female":
 
             if (da == 1) {
-<<<<<<< HEAD
-                alert("Sunday" + femaleNames[0]);
-            }
-            else if (da == 2) {
-                alert("Monday" + femaleNames[1]);
-            }
-            else if (da == 3) {
-                alert("Tuesday" + femaleNames[2]);
-            }
-            else if (da == 4) {
-                alert("Wednesday" + femaleNames[3]);
-            }
-            else if (da == 5) {
-                alert("Thursday" + femaleNames[4]);
-            }
-            else if (da == 6) {
-                alert("Friday" + femaleNames[5]);
-            }
-            else if (da == -0) {
-                alert("Saturday" + femaleNames [6]);
-=======
                 alert("Sunday" + " Your Name is "+femaleNames[0]);
             }
             else if (da == 2) {
@@ -118,7 +75,6 @@ function gender(){
             }
             else if (da == -0) {
                 alert("Saturday" + " Your Name is "+femaleNames [6]);
->>>>>>> master
             }else{
                 console.log("female switch");
             }
