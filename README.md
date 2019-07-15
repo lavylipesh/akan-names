@@ -21,7 +21,7 @@ These is an application that will calculate the day of the week that someone was
 
 * code . atom . based on the text editor you have.
 ## Live page
-
+https://lavylipesh.github.io/akan-names
 
 ## Licence
 *MIT Licence.*
