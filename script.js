@@ -2,91 +2,97 @@ var day = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Sa
 var femaleNames = ["Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"];
 var maleNames = ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"];
 
+var radio;
 
-//calculate day of week
-var d;
 function calculate() {
-    var CC = parseInt(document.getElementById("cc")).value;
-    var YY = parseInt(document.getElementById("yy")).value;
-    var MM = parseInt(document.getElementById("mm")).value;
-    var DD = parseInt(document.getElementById("dd")).value;
-
-    d = (((CC / 4) - 2 * CC - 1) + ((5 * YY / 4)) + ((26 * (MM + 1) / 10)) + DD) % 7;
-    return (Math.round(d));
+    var CC = parseInt(document.getElementById("cc").value);
+    var YY = parseInt(document.getElementById("yy").value);
+    var MM = parseInt(document.getElementById("mm").value);
+    var DD = parseInt(document.getElementById("dd").value);
+    var d = ( ( (CC/4) -2*CC-1) + ( (5*YY/4) ) + ((26*(MM+1)/10) ) + DD)%7;
+  console.log(d);
+  return (Math.floor(d));
 }
 
+function gender(){
+    radio = document.getElementsByName("gender");
 
-//radio buttons
-function radio(){
-    calculate();
-    var rads = document.getElementByName("gender");
-
-    if (rads[0].checked == true) {
-        var gender = "male";
+    if (radio[0].checked == true) {
+        var gender = "Male";
     }
-    else if (rads[1].checked == true) {
-        var gender = "female";
+    else if (radio[1].checked == true) {
+        var gender = "Female";
     }
     else {
-        console.log("pass")
+        console.log(" radio pass")
     }
-}
-//assign akan names & day of birth
-function output() {
-    radio();
     switch (gender) {
-        case "male":
+        case "Male":
 
-            if (day === 0) {
-                document.write("Sunday" + maleNames[0])
+            if (da == 1) {
+                alert("Sunday" + " Your Name is "+maleNames[0]);
             }
-            else if (day === 1) {
-                document.write("Monday" + maleNames[1])
+            else if (da == 2) {
+                alert("Monday" + " Your Name is "+maleNames[1]);
             }
-            else if (day === 2) {
-                document.write("Tuesday" + maleNames[2])
+            else if (da == 3) {
+                alert("Tuesday" +" Your Name is "+ maleNames[2]);
             }
-            else if (day === 3) {
-                document.write("Wednesday" + maleNames[3])
+            else if (da == 4) {
+                alert("Wednesday" +" Your Name is "+ maleNames[3]);
             }
-            else if (day === 4) {
-                document.write("Thursday" + maleNames[4])
+            else if (da == 5) {
+                alert("Thursday" + " Your Name is "+maleNames[4]);
             }
-            else if (day === 5) {
-                document.write("Friday" + maleNames[5])
+            else if (da == 6) {
+                alert("Friday" + " Your Name is "+maleNames[5]);
             }
-            else if (day === 6) {
-                document.write("Saturday" + maleNames[6])
+            else if (da == -0) {
+                alert("Saturday" +" Your Name is "+ maleNames[6]);
+            }else{
+                console.log("male switch");
             }
             break;
-        case "female":
+        case "Female":
 
-            if (day === 0) {
-                document.write("Sunday" + femaleNames[0])
+            if (da == 1) {
+                alert("Sunday" + " Your Name is "+femaleNames[0]);
             }
-            else if (day === 1) {
-                document.write("Monday" + femaleNames[1])
+            else if (da == 2) {
+                alert("Monday" + " Your Name is "+femaleNames[1]);
             }
-            else if (day === 2) {
-                document.write("Tuesday" + femaleNames[2])
+            else if (da == 3) {
+                alert("Tuesday" +" Your Name is "+ femaleNames[2]);
             }
-            else if (day === 3) {
-                document.write("Wednesday" + femaleNames[3])
+            else if (da == 4) {
+                alert("Wednesday" +" Your Name is "+ femaleNames[3]);
             }
-            else if (day === 4) {
-                document.write("Thursday" + femaleNames[4])
+            else if (da == 5) {
+                alert("Thursday" +" Your Name is "+ femaleNames[4]);
             }
-            else if (day === 5) {
-                document.write("Friday" + femaleNames[5])
+            else if (da == 6) {
+                alert("Friday" +" Your Name is "+ femaleNames[5]);
             }
-            else if (day === 6) {
-                document.write("Saturday" + femaleNames)
+            else if (da == -0) {
+                alert("Saturday" + " Your Name is "+femaleNames [6]);
+            }else{
+                console.log("female switch");
             }
-
+            
+            break;
+            default:
+       
     }
+
 }
-console.log("pass");
-//call functions in html
+
+function output() {
+    da = calculate();
+    calculate();
+    gender();
+}
+
+
 
 
 
